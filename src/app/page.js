@@ -8,15 +8,12 @@ export default function Home() {
     const configuration = new Configuration({
       apiKey: process.env.NEXT_PUBLIC_API,
     });
-    const openai = new OpenAIApi(configuration);
-
-      const response = await openai.createImag({
-        prompt: "a white siamese cat",
-        n: 1,
-        size: "256x256",
-      });
-
-      setImageUrl(response.data.data[0].url);
+ const response = await openai.createImageVariation(
+  fs.createReadStream("Phone.png"),
+  1,
+  "1024x1024"
+);
+image_url = response.data.data[0].url;
 
   };
 
