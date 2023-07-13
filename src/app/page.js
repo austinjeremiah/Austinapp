@@ -11,7 +11,7 @@ export default function Home() {
  const response = await openai.createImageVariation(
   fs.createReadStream("Phone.png"),
   1,
-  "1024x1024"
+  "512x512"
 );
 image_url = response.data.data[0].url;
 
