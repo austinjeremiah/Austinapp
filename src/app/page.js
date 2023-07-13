@@ -4,7 +4,6 @@ import { Configuration, OpenAIApi } from "openai";
 
 export default function Home() {
   const [imageUrl, setImageUrl] = useState("");
-
   const createImg = async () => {
     const configuration = new Configuration({
       apiKey: process.env.NEXT_PUBLIC_API,
