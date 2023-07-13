@@ -12,7 +12,7 @@ export default function Home() {
 
       const response = await openai.createImag({
         prompt: "a white siamese cat",
-        n: 7,
+        n: 1,
         size: "256x256",
       });
 
