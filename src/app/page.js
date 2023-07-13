@@ -10,7 +10,7 @@ export default function Home() {
     });
     const openai = new OpenAIApi(configuration);
 
-      const response = await openai.createImage({
+      const response = await openai.createImag({
         prompt: "a white siamese cat",
         n: 7,
         size: "256x256",
